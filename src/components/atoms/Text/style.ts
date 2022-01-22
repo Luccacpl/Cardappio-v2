@@ -23,18 +23,6 @@ interface ITitle {
     marginBottom?: string
 }
 
-const P = styled.p<IP>`
-    font-size: ${props => props.fontSize || '14px'};
-    color: ${props => props.color || props.theme.colors.backgroundBlack};
-    font-weight: ${props => props.fontWeight || '400'};
-    margin-top: ${props => props.marginTop};
-    margin-left: ${props => props.marginLeft};
-    text-align: ${props => props.textAlign};
-    @media screen and (min-width: 1281px){
-        font-size: ${props => props.fontSizeResponsive || '18px'};
-        margin-left: ${props => props.marginLeftResponsive};
-    }
-`
 
 const Title = styled.h1<ITitle>`
     font-family: ${props => props.fontFamily};
@@ -44,8 +32,9 @@ const Title = styled.h1<ITitle>`
     margin-top: ${props => props.marginTop};
     margin-left: ${props => props.marginLeft};
     margin-bottom: ${props => props.marginBottom};
+    //Responsividade pra tela maior que o padrão
     @media screen and (min-width: 1481px){
-        font-size: ${props => props.fontSizeResponsive || '40px'};
+        font-size: ${props => props.fontSizeResponsive || '28px'};
         margin-left: ${props => props.marginLeftResponsive};
     }
 `
@@ -56,10 +45,26 @@ const SubTitle = styled.h1<ITitle>`
     font-weight: ${props => props.fontWeight || '500'};
     margin-top: ${props => props.marginTop};
     margin-left: ${props => props.marginLeft};
+       //Responsividade pra tela maior que o padrão
     @media screen and (min-width: 1481px){
         font-size: ${props => props.fontSizeResponsive || '24px'};
         margin-left: ${props => props.marginLeftResponsive};
     }
 `
+
+const P = styled.p<IP>`
+    font-size: ${props => props.fontSize || '18px'};
+    color: ${props => props.color || props.theme.colors.backgroundBlack};
+    font-weight: ${props => props.fontWeight || '400'};
+    margin-top: ${props => props.marginTop};
+    margin-left: ${props => props.marginLeft};
+    text-align: ${props => props.textAlign};
+    //Responsividade pra tela maior que o padrão
+    @media screen and (min-width: 1481px){
+        font-size: ${props => props.fontSizeResponsive || '20px'};
+        margin-left: ${props => props.marginLeftResponsive};
+    }
+`
+
 
 export { P, Title, SubTitle }

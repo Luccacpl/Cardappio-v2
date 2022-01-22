@@ -1,5 +1,5 @@
+import { url } from 'inspector';
 import styled from 'styled-components'
-
 
 interface FlexProps {
   justifyContent?: string
@@ -15,18 +15,26 @@ interface FlexProps {
   minWidth?: string
   width?: string
   bgColor?: string
+  padding?: string
+  widthBigScreen?: string
 }
 
 const Flex = styled.div<FlexProps>`
   flex: ${props => props.flex};
   display: flex;
-  background-color: ${props => props.bgColor || 'white'}
+  background-color: ${props => props.bgColor};
   justify-content: ${props => props.justifyContent};
   align-items: ${props => props.alignItems};
   height: ${props => props.height};
   margin: ${props => props.margin};
   flex-direction: ${props => props.flexDirection};
   width: ${props => props.width};
+  padding: ${props => props.padding};
+  //RESPONSIVIDADE PARA TELA MAIOR
+  @media screen and (min-width: 1481px) {
+    width: ${props => props.widthBigScreen}
+  }
+  //RESPONSIVIDADE PARA CELULAR
   @media screen and (max-width: 768px) {
     flex-direction: ${props => props.flexDirectionMobile || 'column'};
     margin: ${props => props.marginMobile};
@@ -34,7 +42,7 @@ const Flex = styled.div<FlexProps>`
     justify-content: space-between;
     width: ${props => props.widthMobile};
     min-width: ${props => props.minWidth};
-    }
+  }
 `
 
 export { Flex }

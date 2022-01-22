@@ -2,6 +2,7 @@ export type ThemeType = typeof pallete;
 
 const pallete = {
   colors: {
+    loginBlack: '1C1C1C',
     backgroundBlack: '#141414',
     backgroundInput: '#2C2C2C',
     grey: '#202020',
