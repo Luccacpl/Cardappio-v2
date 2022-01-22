@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 import LoginContent from '../../organisms/LoginContent'
-import { P } from '../../atoms/Text/style'
+import RegisterContent from '../../organisms/RegisterContent'
+
 import { Flex } from '../../atoms/Flex/style'
 import theme from '../../../styles/theme'
 
 import Fundo from '/public/Images/Fundo.png';
 
 const LoginTemplate: React.FC = () => {
+  const [isRegister, setIsRegister] = useState(false)
+
   return (
     <Flex
       width='100vw'
@@ -23,7 +26,16 @@ const LoginTemplate: React.FC = () => {
         padding='100px 60px'
         flexDirection='column'
       >
-        <LoginContent />
+        {isRegister === false
+          ?
+          <LoginContent
+            registerClicked={() => setIsRegister(true)}
+          />
+          :
+          <RegisterContent
+            loginClicked={() => setIsRegister(false)}
+          />
+        }
       </Flex>
       <Flex
         width='65vw'

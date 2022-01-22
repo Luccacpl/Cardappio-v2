@@ -6,12 +6,12 @@ import { Input } from '../../atoms/Input/style'
 import { Flex } from '../../atoms/Flex/style'
 import theme from '../../../styles/theme'
 
-interface ILoginContent {
-  registerClicked?: () => void
+interface IRegisterContent {
+  loginClicked?: () => void
 }
 
 
-const LoginContent = (props: ILoginContent) => {
+const RegisterContent = (props: IRegisterContent) => {
   return (
     <>
       <Title
@@ -30,7 +30,7 @@ const LoginContent = (props: ILoginContent) => {
         fontSize='18px'
         marginTop='8px'
       >
-        Seja Bem-Vindo!
+        Faça seu cadastro
       </SubTitle>
       <P
         fontWeight='400'
@@ -39,31 +39,32 @@ const LoginContent = (props: ILoginContent) => {
         color={theme.colors.white}
         marginTop='16px'
       >
-        Por favor faça o seu login para ter acesso!
+        Complete os campos abaixo para realizar o cadastro!
       </P>
       <Input
-        placeholder='Digite o seu email'
+        placeholder='Digite seu nome'
+        marginTop='28px'
+      />
+      <Input
+        placeholder='Digite seu email'
         marginTop='28px'
       />
       <Input
         placeholder='Digite sua senha'
-        marginTop='12px'
+        marginTop='28px'
       />
-      <Flex
-        flexDirection='row'
-        justifyContent='space-between'
-        alignItems='center'
-        margin='18px 0'
-      >
-        <Button content='Entrar' width='40%' />
-        <P
-          color={theme.colors.orange}
-          fontSize='14px'
-          fontSizeResponsive='18px'
-        >
-          Esqueci a minha senha
-        </P>
-      </Flex>
+      <Input
+        type="date"
+        placeholder='Digite data'
+        marginTop='28px'
+      />
+      <Input
+        placeholder='Digite o nome do restaurante'
+        marginTop='28px'
+      />
+
+      <Button content='Entrar' width='100%' marginTop='28px' />
+
       <hr style={{ marginTop: '46px', border: '1px solid #2C2C2C' }} />
       <Flex
         flexDirection='column'
@@ -71,18 +72,18 @@ const LoginContent = (props: ILoginContent) => {
         alignItems='center'
         margin='32px 0'
       >
-        <P color={theme.colors.white}>Ainda não tem sua conta?</P>
+        <P color={theme.colors.white}>Ja possui uma conta?</P>
         <P
           color={theme.colors.orange}
           marginTop='12px'
-          onClick={props.registerClicked}
+          onClick={props.loginClicked}
           style={{ cursor: 'pointer' }}
         >
-          Crie agora mesmo!
+          Entre agora mesmo!
         </P>
       </Flex>
     </>
   )
 }
 
-export default LoginContent
+export default RegisterContent
