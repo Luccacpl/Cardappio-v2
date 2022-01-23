@@ -40,7 +40,8 @@ const AsideMenu = () => {
       <Flex
         flexDirection='column'
         alignItems='flex-end'
-        height='500px'
+        height='250px'
+        heighBigScreen='500px'
         width='100%'
       >
         {menuItems?.map(({ id, name, route }) => (
@@ -76,6 +77,7 @@ const AsideMenu = () => {
           bgColor={theme.colors.green}
           borderRadius='5px'
           style={{ cursor: 'pointer' }}
+          onClick={() => router.push('/')}
         >
           <ArrowBackOutline />
         </Flex>

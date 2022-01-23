@@ -18,6 +18,7 @@ interface FlexProps {
   padding?: string
   widthBigScreen?: string
   borderRadius?: string
+  heighBigScreen?: string
 }
 
 const Flex = styled.div<FlexProps>`
@@ -35,6 +36,7 @@ const Flex = styled.div<FlexProps>`
   //RESPONSIVIDADE PARA TELA MAIOR
   @media screen and (min-width: 1481px) {
     width: ${props => props.widthBigScreen}
+    height: ${props => props.heighBigScreen}
   }
   //RESPONSIVIDADE PARA CELULAR
   @media screen and (max-width: 768px) {

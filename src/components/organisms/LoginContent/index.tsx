@@ -8,6 +8,7 @@ import theme from '../../../styles/theme'
 
 interface ILoginContent {
   registerClicked?: () => void
+  loginButton?: () => void
 }
 
 
@@ -63,6 +64,7 @@ const LoginContent = (props: ILoginContent) => {
           content='Entrar'
           width='45%'
           height='40px'
+          clicked={props.loginButton}
         />
       </Flex>
       <hr style={{ marginTop: '46px', border: '1px solid #2C2C2C' }} />

@@ -2,9 +2,13 @@ import React, { ReactNode } from 'react'
 
 import { Flex } from '../../atoms/Flex/style'
 import AsideMenu from '../../molecules/AsideMenu'
+import theme from '../../../styles/theme'
+import AsideSubMenu from '../../molecules/AsideSubMenu'
+
 
 interface ILayout {
   children?: ReactNode
+  subMenuItems?: any
 }
 
 const Layout = (props: ILayout) => {
@@ -15,10 +19,10 @@ const Layout = (props: ILayout) => {
       height='100vh'
     >
       <AsideMenu />
-      <Flex width='25vw'>
-
-      </Flex>
-      <Flex width='65vw'>
+      <AsideSubMenu subMenuItems={props.subMenuItems}/>
+      <Flex
+        bgColor={theme.colors.backgroundBlack}
+        width='65vw'>
         {props.children}
       </Flex>
     </Flex>

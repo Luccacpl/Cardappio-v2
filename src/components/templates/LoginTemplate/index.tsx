@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 import LoginContent from '../../organisms/LoginContent'
@@ -11,6 +12,7 @@ import Fundo from '/public/Images/Fundo.png';
 
 const LoginTemplate: React.FC = () => {
   const [isRegister, setIsRegister] = useState(false)
+  const router = useRouter()
 
   return (
     <Flex
@@ -30,6 +32,7 @@ const LoginTemplate: React.FC = () => {
           ?
           <LoginContent
             registerClicked={() => setIsRegister(true)}
+            loginButton={() => router.push('/menu')}
           />
           :
           <RegisterContent

@@ -12,11 +12,16 @@ const menuItems: ImenuItems[] = [
   },
   {
     id: 1,
-    name: 'Usuários',
-    route: '/users'
+    name:'Comandas',
+    route: '/commands'
   },
   {
     id: 2,
+    name: 'Mesas',
+    route: '/tables'
+  },
+  {
+    id: 3,
     name: 'Pedidos',
     route: '/orders'
   }
