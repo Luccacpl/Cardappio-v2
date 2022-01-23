@@ -10,7 +10,7 @@ const Orders: React.FC = () => {
         <title>Cardappio - Orders</title>
       </Head>
 
-     <Layout>
+     <Layout hasAddButton={false}>
        <p>PEDIDOS</p>
      </Layout>
     </div>

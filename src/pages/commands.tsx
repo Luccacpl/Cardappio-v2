@@ -10,7 +10,7 @@ const Commands: React.FC = () => {
         <title>Cardappio - Users</title>
       </Head>
 
-     <Layout>
+     <Layout hasAddButton={false}>
        <p>COMANDAS</p>
      </Layout>
     </div>

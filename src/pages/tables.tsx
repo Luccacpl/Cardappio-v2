@@ -10,7 +10,7 @@ const Tables: React.FC = () => {
         <title>Cardappio - Tables</title>
       </Head>
 
-     <Layout>
+     <Layout hasAddButton={false}>
        <p>MESAS</p>
      </Layout>
     </div>
