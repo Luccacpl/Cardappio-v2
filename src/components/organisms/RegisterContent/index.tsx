@@ -43,28 +43,44 @@ const RegisterContent = (props: IRegisterContent) => {
       </P>
       <Input
         placeholder='Digite seu nome'
-        marginTop='28px'
+        marginTop='48px'
+        height='55px'
       />
       <Input
         placeholder='Digite seu email'
         marginTop='28px'
+        height='55px'
       />
       <Input
         placeholder='Digite sua senha'
         marginTop='28px'
+        height='55px'
       />
       <Input
         type="date"
         placeholder='Digite data'
         marginTop='28px'
+        height='55px'
       />
       <Input
         placeholder='Digite o nome do restaurante'
         marginTop='28px'
+        height='55px'
       />
-
-      <Button content='Entrar' width='100%' marginTop='28px' />
-
+      <Flex
+        flexDirection='row'
+        justifyContent='center'
+        alignItems='center'
+      >
+        <Button
+          isNotForm
+          fontSize='18px'
+          content='Cadastrar'
+          width='95%'
+          height='40px'
+          marginTop='28px'
+        />
+      </Flex>
       <hr style={{ marginTop: '46px', border: '1px solid #2C2C2C' }} />
       <Flex
         flexDirection='column'

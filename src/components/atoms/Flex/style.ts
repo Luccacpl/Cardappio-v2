@@ -17,6 +17,7 @@ interface FlexProps {
   bgColor?: string
   padding?: string
   widthBigScreen?: string
+  borderRadius?: string
 }
 
 const Flex = styled.div<FlexProps>`
@@ -30,6 +31,7 @@ const Flex = styled.div<FlexProps>`
   flex-direction: ${props => props.flexDirection};
   width: ${props => props.width};
   padding: ${props => props.padding};
+  border-radius: ${props => props.borderRadius};
   //RESPONSIVIDADE PARA TELA MAIOR
   @media screen and (min-width: 1481px) {
     width: ${props => props.widthBigScreen}

@@ -14,6 +14,7 @@ interface IButton {
   isNotForm?: boolean
   color?: string
   BgColor?: string
+  fontSize?: string
 }
 
 const Button = (props: IButton) => {

@@ -43,26 +43,27 @@ const LoginContent = (props: ILoginContent) => {
       </P>
       <Input
         placeholder='Digite o seu email'
-        marginTop='28px'
+        marginTop='48px'
+        height='55px'
       />
       <Input
         placeholder='Digite sua senha'
-        marginTop='12px'
+        marginTop='24px'
+        height='55px'
       />
       <Flex
         flexDirection='row'
         justifyContent='space-between'
         alignItems='center'
-        margin='18px 0'
+        margin='24px 0'
       >
-        <Button content='Entrar' width='40%' />
-        <P
-          color={theme.colors.orange}
-          fontSize='14px'
-          fontSizeResponsive='18px'
-        >
-          Esqueci a minha senha
-        </P>
+        <Button
+          isNotForm
+          fontSize='18px'
+          content='Entrar'
+          width='45%'
+          height='40px'
+        />
       </Flex>
       <hr style={{ marginTop: '46px', border: '1px solid #2C2C2C' }} />
       <Flex

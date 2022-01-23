@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.colors.backgroundBlack};
+    background-color: ${props => props.theme.colors.backgroundLightBlack};
     color: ${props => props.theme.colors.white}
   }
 `
