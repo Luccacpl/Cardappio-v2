@@ -12,6 +12,7 @@ interface ISubMenuItems {
 
 interface IAsideMenu {
   subMenuItems: ISubMenuItems[]
+  hasAddButton: boolean
 }
 
 const AsideSubMenu = (props: IAsideMenu) => {
@@ -42,8 +43,8 @@ const AsideSubMenu = (props: IAsideMenu) => {
             : router.pathname === '/commands'
               ? ' Comandas'
               : router.pathname === '/tables'
-              ? '  Mesas'
-              : ' Pedidos'
+                ? '  Mesas'
+                : ' Pedidos'
           }
         </SubTitle>
         <P
@@ -58,8 +59,8 @@ const AsideSubMenu = (props: IAsideMenu) => {
             : router.pathname === '/commands'
               ? ' comandas achadas'
               : router.pathname === '/tables'
-              ? '  mesas achadas'
-              : ''
+                ? '  mesas achadas'
+                : ''
           }
         </P>
       </Flex>
@@ -85,13 +86,13 @@ const AsideSubMenu = (props: IAsideMenu) => {
             fontSizeResponsive='20px'
           >
             {router.pathname === '/menu'
-            ? 'Categorias'
-            : router.pathname === '/commands'
-              ? 'Comandas'
-              : router.pathname === '/tables'
-              ? 'Mesas'
-              : ''
-          }
+              ? 'Categorias'
+              : router.pathname === '/commands'
+                ? 'Comandas'
+                : router.pathname === '/tables'
+                  ? 'Mesas'
+                  : ''
+            }
           </P>
         </Flex>
         {props.subMenuItems?.map(({ name, id }) => (
@@ -107,7 +108,7 @@ const AsideSubMenu = (props: IAsideMenu) => {
             width={isSelected !== name ? '100%' : '98%'}
             borderRadius='5px 0 0 5px'
             style={{ cursor: 'pointer' }}
-            onClick={() => setIsSelected(name) }
+            onClick={() => setIsSelected(name)}
           >
             <P
               color={theme.colors.green}
@@ -119,7 +120,28 @@ const AsideSubMenu = (props: IAsideMenu) => {
             </P>
           </Flex>
         ))}
-
+        {props.hasAddButton === true && (
+          <Flex
+            flexDirection='row'
+            alignItems='center'
+            margin='12px 0 0 0'
+            padding='0 0 0 13px'
+            height='40px'
+            heighBigScreen='50px'
+            width='100%'
+            borderRadius='5px 0 0 5px'
+            style={{ cursor: 'pointer' }}
+          >
+            <P
+              color={theme.colors.green}
+              fontWeight='400'
+              fontSize='14px'
+              fontSizeResponsive='18px'
+            >
+              + Adicionar nova Categoria
+            </P>
+          </Flex>
+        )}
       </Flex>
     </Flex>
   )

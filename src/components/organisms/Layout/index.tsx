@@ -9,6 +9,7 @@ import AsideSubMenu from '../../molecules/AsideSubMenu'
 interface ILayout {
   children?: ReactNode
   subMenuItems?: any
+  hasAddButton: boolean
 }
 
 const Layout = (props: ILayout) => {
@@ -19,7 +20,10 @@ const Layout = (props: ILayout) => {
       height='100vh'
     >
       <AsideMenu />
-      <AsideSubMenu subMenuItems={props.subMenuItems}/>
+      <AsideSubMenu
+        subMenuItems={props.subMenuItems}
+        hasAddButton={props.hasAddButton}
+      />
       <Flex
         bgColor={theme.colors.backgroundBlack}
         width='65vw'>

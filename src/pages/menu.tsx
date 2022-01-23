@@ -33,7 +33,10 @@ const Menu: React.FC = () => {
         <title>Cardappio - Menu</title>
       </Head>
 
-     <Layout subMenuItems={subMenuItems}>
+     <Layout
+      subMenuItems={subMenuItems}
+      hasAddButton={true}
+    >
        <p>CARDÁPIO</p>
      </Layout>
     </div>
