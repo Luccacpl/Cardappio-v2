@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
 import theme from '../../../styles/theme'
@@ -19,6 +19,10 @@ const AsideSubMenu = (props: IAsideMenu) => {
 
   const router = useRouter()
   const [isSelected, setIsSelected] = useState('')
+
+  useEffect(() => {
+    localStorage.setItem("Category", isSelected);
+  }, [isSelected])
 
   return (
     <Flex

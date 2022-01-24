@@ -35,8 +35,8 @@ const Flex = styled.div<FlexProps>`
   border-radius: ${props => props.borderRadius};
   //RESPONSIVIDADE PARA TELA MAIOR
   @media screen and (min-width: 1481px) {
-    width: ${props => props.widthBigScreen}
-    height: ${props => props.heighBigScreen}
+    width: ${props => props.widthBigScreen};
+    height: ${props => props.heighBigScreen};
   }
   //RESPONSIVIDADE PARA CELULAR
   @media screen and (max-width: 768px) {

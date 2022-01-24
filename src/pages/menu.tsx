@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import Layout from '../components/organisms/Layout'
-
+import MenuContent from '../components/organisms/MenuContent'
 
 
 const Menu: React.FC = () => {
@@ -37,7 +37,7 @@ const Menu: React.FC = () => {
       subMenuItems={subMenuItems}
       hasAddButton={true}
     >
-       <p>CARDÁPIO</p>
+       <MenuContent />
      </Layout>
     </div>
   )
